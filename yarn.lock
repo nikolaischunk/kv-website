@@ -1179,6 +1179,16 @@ levn@^0.4.1:
     prelude-ls "^1.2.1"
     type-check "~0.4.0"
 
+lib-js@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/lib-js/-/lib-js-0.0.7.tgz#0d2c70a2d45f67a47f1d03a7753aae9c043d2f80"
+  integrity sha512-I62BBQzznOh5zkMuQO4PGcyTGJzN1Gz5kec8VQFDGbFRfPCkJ1c84ZVLwT9trIlm81PGnm+vPbKjd86KvcS2PA==
+
+lib@^4.3.3:
+  version "4.3.3"
+  resolved "https://registry.yarnpkg.com/lib/-/lib-4.3.3.tgz#a92c85b27610e1f1361cc54110a3653abce35b5f"
+  integrity sha512-5ZIjwJvbfVJjbu0BTpfkqJrQ2ykXzo+XRFkHkTPHGpAPNS9vWwhLn1caQsedTKXmQ2U9gKYFSAlfjAXdXuWBjA==
+
 locate-path@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/locate-path/-/locate-path-2.0.0.tgz#2b568b265eec944c6d9c0de9c3dbbbca0354cd8e"

@@ -1,6 +1,6 @@
 {
-  "name": "birthdayy.xyz",
-  "version": "0.1.0",
+  "name": "kv-website",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -11,6 +11,8 @@
   "dependencies": {
     "bulma": "^0.9.4",
     "cookies-next": "^2.1.1",
+    "lib": "^4.3.3",
+    "lib-js": "^0.0.7",
     "next": "12.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
