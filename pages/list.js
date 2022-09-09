@@ -10,6 +10,7 @@ export const getStaticProps = async () => {
     props: {
       data: data,
     },
+    revalidate: 30,
   };
 };
 
@@ -19,12 +20,14 @@ const ListPage = ({ data }) => {
       <h3>list</h3>
       <div className="columns is-multiline">
         {data.map((item) => {
-          <div className="column is-6" key={item[0]}>
-            <List_item
-              name={item[0]}
-              content={JSON.stringify(item[1], null, 4)}
-            />
-          </div>;
+          return (
+            <div className="column is-4" key={item[0]}>
+              <List_item
+                name={item[0]}
+                content={JSON.stringify(item[1], null, 4)}
+              />
+            </div>
+          );
         })}
       </div>
     </div>

@@ -13,7 +13,7 @@ const List = () => {
         {list
           ? list.map((item) => {
               return (
-                <div className="column is-6" key={item[0]}>
+                <div className="column is-4" key={item[0]}>
                   <List_item
                     name={item[0]}
                     content={JSON.stringify(item[1], null, 4)}

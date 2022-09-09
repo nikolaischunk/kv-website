@@ -1,10 +1,25 @@
 import { FaEdit } from "react-icons/fa";
 import { MdModeEdit, MdDelete } from "react-icons/md";
 import { ImCheckmark } from "react-icons/im";
+import useClearEntry from "../../fetching/useClearEntry";
+import list from "../../fetching/useList";
+import useSWR from "swr";
+const fetcher = (...args) => fetch(...args).then((res) => res.json());
+
+function deleteEntry(key) {
+  console.log("DeleteEntry", key);
+  const { data, error } = useSWR(`/api/kv/clear?key=${key}`, fetcher);
+  return {
+    data: data,
+    isLoading: !error && !data,
+    isError: error,
+  };
+}
 
 const List_item = ({ name, content }) => {
-  console.log("name: ", name);
-  console.log("content: ", content);
+  //   console.log("name: ", name);
+  //   console.log("content: ", content);
+
   return (
     <div className="list-item">
       <div className="list-item-content">
@@ -19,16 +34,16 @@ const List_item = ({ name, content }) => {
             defaultValue={content}
           ></textarea>
         </div>
-      </div>
-
-      <div className="list-item-controls">
-        <div className="buttons is-right">
+        <div className="buttons mt-2">
           <button className="button is-primary">
             <span className="icon is-small">{<ImCheckmark />}</span>
             <span>Save</span>
           </button>
           <br />
-          <button className="button is-normal icon-text is-danger is-outlined">
+          <button
+            className="button is-normal icon-text is-danger is-outlined"
+            onClick={() => useDeleteEntry(name)}
+          >
             <span>Delete</span>
             <span className="icon">{<MdDelete />} </span>
           </button>
