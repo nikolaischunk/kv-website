@@ -1,0 +1,82 @@
+import Table_item from "./table_item";
+import Table_structure from "./table_structure";
+
+const Table = () => {
+  const list = [
+    ["CURRENT_BIRTHDAY_CHILDREN_306763470886404098", ["305011722014687232"]],
+    [
+      "CURRENT_BIRTHDAY_CHILDREN_836344860884860928",
+      {
+        id: 10,
+        name: "John",
+        data: [
+          ["852596313362399245"],
+          ["852596313362399245"],
+          ["852596313362399245"],
+        ],
+      },
+    ],
+    ["CURRENT_BIRTHDAY_CHILDREN_849934985884729374", ["515574228142129152"]],
+    ["CURRENT_BIRTHDAY_CHILDREN_934467365389893704", ["267614892821970945"]],
+    ["CURRENT_BIRTHDAY_CHILDREN_903207392521641994", ["869542767196532766"]],
+    ["CURRENT_BIRTHDAY_CHILDREN_846910234961903638", ["143356543918669824"]],
+    ["CURRENT_BIRTHDAY_CHILDREN_867695639013359636", ["867392963914498048"]],
+    ["CURRENT_BIRTHDAY_CHILDREN_770358991338733568", ["824881301608726578"]],
+    ["questions_current_index", 13],
+    ["CURRENT_BIRTHDAY_CHILDREN_919401004724789278", []],
+    ["CURRENT_BIRTHDAY_CHILDREN_941430646969098310", ["531793723407728652"]],
+    ["whois_memberleft_766707453994729532", "766707785449734186"],
+    ["pm2.5", "5"],
+    ["abcde", "hhhhhhhhhh"],
+    ["CURRENT_BIRTHDAY_CHILDREN_493325751756521492", ["852596313362399245"]],
+    ["CURRENT_BIRTHDAY_CHILDREN_888106364478570577", ["319043799957635073"]],
+    ["CURRENT_BIRTHDAY_CHILDREN_848260125068492860", ["626501373998923786"]],
+    ["CURRENT_BIRTHDAY_CHILDREN_868478702114209792", ["587412094895259648"]],
+    ["CURRENT_BIRTHDAY_CHILDREN_949599069255381012", ["785698078158094379"]],
+    ["CURRENT_BIRTHDAY_CHILDREN_730026338743746571", ["571435111011057684"]],
+    ["CURRENT_BIRTHDAY_CHILDREN_904015180093083699", ["947576436263374899"]],
+    ["CURRENT_BIRTHDAY_CHILDREN_936636020324175912", ["929729454127869952"]],
+    ["CURRENT_BIRTHDAY_CHILDREN_930702736935227423", ["492925507722149890"]],
+    ["CURRENT_BIRTHDAY_CHILDREN_822117212341010452", ["497135136136232982"]],
+    ["CURRENT_BIRTHDAY_CHILDREN_779772708085956649", ["637867877386682388"]],
+    ["CURRENT_BIRTHDAY_CHILDREN_800875650646540318", ["300058137182863360"]],
+    ["CURRENT_BIRTHDAY_CHILDREN_568030093465878528", ["265689720397365248"]],
+    ["CURRENT_BIRTHDAY_CHILDREN_754097336418041867", ["495309171244269578"]],
+    ["domain_message_id", "989634398901133312"],
+    ["qotd_message_id", "1017056750656036894"],
+    ["CURRENT_BIRTHDAY_CHILDREN_959846220564693033", ["907841238261198893"]],
+  ];
+
+  return (
+    <>
+      {/* <abbr title="Index">Index</abbr> */}
+      <pre>
+        <code>[`907841238261198893`]</code>
+      </pre>
+
+      <table className="table">
+        <thead>
+          <Table_structure />
+        </thead>
+        <tfoot>
+          <Table_structure />
+        </tfoot>
+        <tbody>
+          {list.map((item, index) => {
+            return (
+              <Table_item
+                index={index}
+                key={item[0]}
+                name={item[0]}
+                content={JSON.stringify(item[1])}
+                type={typeof item[1]}
+              />
+            );
+          })}
+        </tbody>
+      </table>
+    </>
+  );
+};
+
+export default Table;
