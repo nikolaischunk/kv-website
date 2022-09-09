@@ -3,5 +3,5 @@ const lib = require("lib")({ token: process.env.AUTOCODE_TOKEN });
 
 export default async function handler(req, res) {
   const kvList = await lib.utils.kv["@release"].entries();
-  res.status(200).json({ list: kvList });
+  res.status(200).json(kvList);
 }
