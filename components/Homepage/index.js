@@ -4,9 +4,9 @@ import Table from "./table";
 const IndexComponent = () => {
   return (
     <>
-      <h1 className="title">Homepage</h1>
+      <h1 className="title">KeyValue</h1>
       <List />
-      <Table />
+      {/* <Table /> */}
     </>
   );
 };

@@ -2,7 +2,8 @@
 const lib = require("lib")({ token: process.env.AUTOCODE_TOKEN });
 
 export default async function handler(req, res) {
-  const { key } = req.query;
+  const body = req.body;
+  const { key } = body;
   let result = await lib.utils.kv["@release"].clear({
     key: key,
   });
